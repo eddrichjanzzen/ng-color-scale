@@ -1,8 +1,8 @@
 # ng-spectrum-scale
 
-[![npm](https://img.shields.io/npm/v/ng-chat.svg)](https://www.npmjs.com/package/ng-spectrum-scale)
-[![npm downloads](https://img.shields.io/npm/dm/ng-chat.svg)](https://npmjs.org/ng-spectrum-scale)
-[![Build Status](https://travis-ci.org/rpaschoal/ng-chat.svg?branch=development)](https://travis-ci.org/rpaschoal/ng-chat)
+[![npm](https://img.shields.io/npm/v/ng-spectrum-scale.svg)](https://www.npmjs.com/package/ng-spectrum-scale)
+[![npm downloads](https://img.shields.io/npm/dm/ng-spectrum-scale.svg)](https://npmjs.org/ng-spectrum-scale)
+<!-- [![Build Status](https://travis-ci.org/rpaschoal/ng-chat.svg?branch=development)](https://travis-ci.org/rpaschoal/ng-chat) -->
 
 
 A spectrum scale component implemented using D3.js and Angular. 
