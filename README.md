@@ -48,6 +48,7 @@ import { NgSpectrumScaleModule } from 'ng-spectrum-scale';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class AppModule { }
 ```
 #### In your `app.component.html` add the following:
 
@@ -61,6 +62,8 @@ export class AppModule { }
   [maxVal]="1"
   [colorList]="['#FF6347', '#D53E4F','#090979','#0000FF']"
   [displayMeta]="'Your article is '+ '<b>Feminine</b>'"
+>
+</app-spectrum-scale>
 ```
 
 #### And in your `app.component.ts`:
