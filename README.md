@@ -26,7 +26,7 @@ npm install ng-spectrum-scale
 ### Setup
 #### Import NgSpectrumScaleModule on your AppModule (EG: app.module.ts):
 
-```
+```js
 ...
 
 // NgSpectrumScaleModule
