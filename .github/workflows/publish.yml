@@ -43,7 +43,7 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Deploy to Npm
         run: npm publish --access public
-        # working-directory: ng-spectrum-scale
+        working-directory: ng-spectrum-scale/dist/ng-spectrum-scale
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
