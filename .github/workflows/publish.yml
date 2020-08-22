@@ -1,4 +1,4 @@
-name: "publish"
+name: "Publish spectrum"
 
 on: 
   push: 
@@ -7,47 +7,46 @@ on:
 
 jobs:
   build:
+    name: Build and Test
     runs-on: ubuntu-latest
-    strategy:
-      matrix: 
-        node-version: [12.x]
-    steps: 
-      - name: checkout
-        uses: actions/checkout@v2.1.1 
-      - name: node
-        uses: actions/setup-node@v1.4.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node 12.x
+        uses: actions/setup-node@v1
         with:
-          node-version: 12
-
-  release: 
-    name : publish
+          node-version: '12.x'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build-spectrum
+      - name: Archive build
+        if: success()
+        uses: actions/upload-artifact@v1
+        with:
+          name: deploy_dist
+          path: dist
+  deploy:
     runs-on: ubuntu-latest
-    steps: 
-      - name: checkout
-        uses: actions/checkout@v2.1.1 
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Download build
+        uses: actions/download-artifact@v1
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Cache node modules
-        uses: actions/cache@v1
-
-      - name: Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v1.4.2
+          name: deploy_dist
+      - name: Use Node 12.x
+        uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '12.x'
           registry-url: https://registry.npmjs.org
-
-      - name: npm ci and npm run build-spectrum
-        run: |
-          npm ci
-          npm run build:ci
-      
-
-      - name: publish
+      - name: Deploy to Npm
         run: npm publish --access public
-        working-directory: ng-spectrum-scale/dist/ng-spectrum-scale
-        env: 
+        # working-directory: ng-spectrum-scale
+        env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+
+
+
+
