@@ -104,7 +104,7 @@ __Optional Settings__
 
 eg. colorList = ['#FF6347', '#D53E4F','#090979','#0000FF']
 
-Example outputs:
+__Example Outputs__
 
 ![Sentiment](/images/sentiment-analysis.png)
 ![Gender](/images/gender-bias.png)
