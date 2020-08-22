@@ -1,0 +1,33 @@
+<h1>Gender Bias</h1>
+
+<ng-spectrum-scale
+[data]="-0.799"
+[leftLabel]="'Feminine'"
+[rightLabel]="'Masculine'"
+[middleLabel]="'Neutral'"
+[minVal]="-1"
+[maxVal]="1"
+[colorList]="['#FF6347', '#D53E4F','#090979','#0000FF']"
+[displayMeta]="'Your article is '+ '<b>Feminine</b>'"
+>
+</ng-spectrum-scale>  
+
+
+<h1>Sentiment Analysis</h1>
+<ng-spectrum-scale
+[data]="0.55"
+[leftLabel]="'Negative'"
+[rightLabel]="'Positive'"
+[middleLabel]="'Neutral'"
+[minVal]="-1"
+[maxVal]="1"
+[colorList]="['#9E0142', '#D53E4F',
+                    '#F46D43', '#FDAE61',
+                    '#FEE08B', '#FFFFBF',
+                    '#E6F598', '#ABDDA4', 
+                    '#66C2A5', '#6AA84F',
+                    '#38761D']"
+[hideAxis]="true"
+[displayMeta]="'Your sentiment score is '+ '<b>Positive</b>'"
+>
+</ng-spectrum-scale>  

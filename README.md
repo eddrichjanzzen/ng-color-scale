@@ -1,27 +1,111 @@
-# LibWorkspace
+# ng-spectrum-scale
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+[![npm](https://img.shields.io/npm/v/ng-chat.svg)](https://www.npmjs.com/package/ng-chat)
+[![npm downloads](https://img.shields.io/npm/dm/ng-chat.svg)](https://npmjs.org/ng-chat)
+[![Build Status](https://travis-ci.org/rpaschoal/ng-chat.svg?branch=development)](https://travis-ci.org/rpaschoal/ng-chat)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A spectrum scale component implemented using D3.js and Angular. 
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting started
 
-## Build
+### Dependencies
+* D3.js
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install d3
+```
 
-## Running unit tests
+### Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm install ng-spectrum-scale
+```
 
-## Running end-to-end tests
+### Setup
+#### Import NgSpectrumScaleModule on your AppModule (EG: app.module.ts):
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+...
 
-## Further help
+// NgSpectrumScaleModule
+import { NgSpectrumScaleModule } from 'ng-spectrum-scale';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+
+    // NgSpectrumScaleModule
+
+    NgSpectrumScaleModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+export class AppModule { }
+```
+#### In your `app.component.html` add the following:
+
+```html
+<app-spectrum-scale
+  [data]="-0.799"
+  [leftLabel]="'Feminine'"
+  [rightLabel]="'Masculine'"
+  [middleLabel]="'Neutral'"
+  [minVal]="-1"
+  [maxVal]="1"
+  [colorList]="['#FF6347', '#D53E4F','#090979','#0000FF']"
+  [displayMeta]="'Your article is '+ '<b>Feminine</b>'"
+```
+
+#### And in your `app.component.ts`:
+
+```js
+import { Component } from '@angular/core';
+import { ChatAdapter } from 'ng-chat';
+import { MyAdapter } from 'my-adapter';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  data=-0.799
+  leftLabel='Feminine'
+  rightLabel='Masculine'
+  middleLabel='Neutral'
+  minVal= -1
+  maxVal= 1
+  colorList = ['#FF6347', '#D53E4F','#090979','#0000FF']
+  displayMeta = 'Your article is '+ '<b>Feminine</b>'
+}
+```
+
+__Required Settings__
+* [data]{number}: The data you wish to display on the scale.
+* [minVal]{number}: The minimum value in the scale. (default value -1)
+* [maxVal]{number}:  The maximum value in the scale (default value 1)
+
+
+__Optional Settings__
+* [leftLabel]{string}: The leftLabel value in the scale (blank by default)
+* [rightLabel]{string}:  The leftLabel value in the scale (blank by default)
+* [leftLabel]{string}: The leftLabel value in the scale (blank by default)
+* [middleLabel]{html string}:  The displayMeta value in the scale. (blank by default)
+* [hideAxis]{boolean}: Option to hide the axis displayed. (set to false by default)
+* [colorList]{Array<string>}: Accepts a list of hex values to form the color spectrum. (sets a color spectrum for you by default). You may override this to change the spectrum. 
+
+eg. colorList = ['#FF6347', '#D53E4F','#090979','#0000FF']
+
+Example outputs:
+
+![Sentiment](/images/sentiment-analysis.png)
+![Gender](/images/gender-bias.png)
+

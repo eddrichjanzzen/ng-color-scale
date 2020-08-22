@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-spectrum-scale": [
+        "dist/ng-spectrum-scale/ng-spectrum-scale",
+        "dist/ng-spectrum-scale"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
