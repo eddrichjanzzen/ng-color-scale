@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/ng-spectrum-scale.svg)](https://www.npmjs.com/package/ng-spectrum-scale)
 [![npm downloads](https://img.shields.io/npm/dm/ng-spectrum-scale.svg)](https://npmjs.org/ng-spectrum-scale)
-![publish](https://github.com/eddrichjanzzen/ng-spectrum-scale/workflows/publish/badge.svg)
+![publish](https://github.com/eddrichjanzzen/ng-spectrum-scale/workflows/Publish%20spectrum/badge.svg)
 
 A spectrum scale component implemented using D3.js and Angular. 
 
