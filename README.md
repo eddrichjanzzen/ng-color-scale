@@ -48,7 +48,6 @@ import { NgSpectrumScaleModule } from 'ng-spectrum-scale';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export class AppModule { }
 ```
 #### In your `app.component.html` add the following:
 
