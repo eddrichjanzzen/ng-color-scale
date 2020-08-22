@@ -68,8 +68,6 @@ export class AppModule { }
 
 ```js
 import { Component } from '@angular/core';
-import { ChatAdapter } from 'ng-chat';
-import { MyAdapter } from 'my-adapter';
 
 @Component({
   selector: 'app-root',
