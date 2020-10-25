@@ -3,6 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ng-color-scale": {
+      "projectType": "library",
+      "root": "projects/ng-color-scale",
+      "sourceRoot": "projects/ng-color-scale/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-color-scale/tsconfig.lib.json",
+            "project": "projects/ng-color-scale/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-color-scale/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-color-scale/src/test.ts",
+            "tsConfig": "projects/ng-color-scale/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-color-scale/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-color-scale/tsconfig.lib.json",
+              "projects/ng-color-scale/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
     "ng-tester": {
       "projectType": "application",
       "schematics": {
@@ -120,46 +160,6 @@
             "production": {
               "devServerTarget": "ng-tester:serve:production"
             }
-          }
-        }
-      }
-    },
-    "ng-color-scale": {
-      "projectType": "library",
-      "root": "projects/ng-color-scale",
-      "sourceRoot": "projects/ng-color-scale/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ng-color-scale/tsconfig.lib.json",
-            "project": "projects/ng-color-scale/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ng-color-scale/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ng-color-scale/src/test.ts",
-            "tsConfig": "projects/ng-color-scale/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-color-scale/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ng-color-scale/tsconfig.lib.json",
-              "projects/ng-color-scale/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
