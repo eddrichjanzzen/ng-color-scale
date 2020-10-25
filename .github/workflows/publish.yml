@@ -1,4 +1,4 @@
-name: "Publish spectrum"
+name: "Publish color"
 
 on: 
   push: 
@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build-spectrum
+        run: npm run build-color
       - name: Archive build
         if: success()
         uses: actions/upload-artifact@v1
@@ -43,7 +43,7 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Deploy to Npm
         run: npm publish --access public
-        working-directory: deploy_dist/ng-spectrum-scale
+        working-directory: deploy_dist/ng-color-scale
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
