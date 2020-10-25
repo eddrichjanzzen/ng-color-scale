@@ -1,24 +1,109 @@
-# NgColorScale
+# ng-color-scale
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+[![npm](https://img.shields.io/npm/v/ng-color-scale.svg)](https://www.npmjs.com/package/ng-color-scale)
+[![npm downloads](https://img.shields.io/npm/dm/ng-color-scale.svg)](https://npmjs.org/ng-color-scale)
+![publish](https://github.com/eddrichjanzzen/ng-color-scale/workflows/Publish%20color/badge.svg)
 
-## Code scaffolding
+A color scale component implemented using D3.js and Angular. 
 
-Run `ng generate component component-name --project ng-color-scale` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-color-scale`.
-> Note: Don't forget to add `--project ng-color-scale` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+## Getting started
 
-Run `ng build ng-color-scale` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Dependencies
+* D3.js
 
-## Publishing
+```
+npm install d3
+```
 
-After building your library with `ng build ng-color-scale`, go to the dist folder `cd dist/ng-color-scale` and run `npm publish`.
+### Installation
 
-## Running unit tests
+```
+npm install ng-color-scale
+```
 
-Run `ng test ng-color-scale` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Setup
+#### Import NgColorScaleModule on your AppModule (EG: app.module.ts):
 
-## Further help
+```js
+...
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+// NgColorScaleModule
+import { NgColorScaleModule } from 'ng-color-scale';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+
+    // NgColorScaleModule
+
+    NgColorScaleModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+#### In your `app.component.html` add the following:
+
+```html
+<app-color-scale
+  [data]="-0.799"
+  [leftLabel]="'Feminine'"
+  [rightLabel]="'Masculine'"
+  [middleLabel]="'Neutral'"
+  [minVal]="-1"
+  [maxVal]="1"
+  [colorList]="['#FF6347', '#D53E4F','#090979','#0000FF']"
+  [displayMeta]="'Your article is '+ '<b>Feminine</b>'"
+>
+</app-color-scale>
+```
+
+#### And in your `app.component.ts`:
+
+```js
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  data=-0.799
+  leftLabel='Feminine'
+  rightLabel='Masculine'
+  middleLabel='Neutral'
+  minVal= -1
+  maxVal= 1
+  colorList = ['#FF6347', '#D53E4F','#090979','#0000FF']
+  displayMeta = 'Your article is '+ '<b>Feminine</b>'
+}
+```
+
+__Required Settings__
+* [data]{number}: The data you wish to display on the scale.
+* [minVal]{number}: The minimum value in the scale. (default value -1)
+* [maxVal]{number}:  The maximum value in the scale (default value 1)
+
+
+__Optional Settings__
+* [leftLabel]{string}: The leftLabel value in the scale (blank by default)
+* [rightLabel]{string}:  The leftLabel value in the scale (blank by default)
+* [leftLabel]{string}: The leftLabel value in the scale (blank by default)
+* [middleLabel]{html string}:  The displayMeta value in the scale. (blank by default)
+* [hideAxis]{boolean}: Option to hide the axis displayed. (set to false by default)
+* [colorList]{Array<string>}: Accepts a list of hex values to form the color color. (sets a color color for you by default). You may override this to change the color. 
+
+eg. colorList = ['#FF6347', '#D53E4F','#090979','#0000FF']
+
+__Example Outputs__
+
+![Sentiment](/images/sentiment-analysis.png)
+![Gender](/images/gender-bias.png)
+
