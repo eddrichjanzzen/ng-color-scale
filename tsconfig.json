@@ -19,6 +19,10 @@
       "ng-spectrum-scale": [
         "dist/ng-spectrum-scale/ng-spectrum-scale",
         "dist/ng-spectrum-scale"
+      ],
+      "ng-color-scale": [
+        "dist/ng-color-scale/ng-color-scale",
+        "dist/ng-color-scale"
       ]
     }
   },

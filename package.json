@@ -1,5 +1,5 @@
 {
-  "name": "ng-spectrum-scale",
+  "name": "ng-color-scale",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-spectrum": "ng build ng-spectrum-scale --prod",
-    "build:ci": "ng build ng-spectrum-scale --prod --sourceMap=false --base-href /YOUR_REPOSITORY_NAME_HERE/",
+    "build-color": "ng build ng-color-scale --prod",
+    "build:ci": "ng build ng-color-scale --prod --sourceMap=false --base-href /YOUR_REPOSITORY_NAME_HERE/",
     "test:ci": "ng test --watch=false --code-coverage --source-map true"
   },
   "private": true,
