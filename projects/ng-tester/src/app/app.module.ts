@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgSpectrumScaleModule } from 'ng-spectrum-scale';
+import { NgColorScaleModule } from 'ng-color-scale';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgSpectrumScaleModule
+    NgColorScaleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

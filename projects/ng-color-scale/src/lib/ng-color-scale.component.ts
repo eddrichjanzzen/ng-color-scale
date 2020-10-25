@@ -2,12 +2,12 @@ import { Component, OnChanges, Input, OnInit, ChangeDetectionStrategy, SimpleCha
 import * as d3 from 'd3';
 
 @Component({
-  selector: 'ng-spectrum-scale',
-  templateUrl: './ng-spectrum-scale.component.html',
+  selector: 'ng-color-scale',
+  templateUrl: './ng-color-scale.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./ng-spectrum-scale.component.scss']
+  styleUrls: ['./ng-color-scale.component.scss']
 })
-export class NgSpectrumScaleComponent implements OnChanges {
+export class NgColorScaleComponent implements OnChanges {
 
   @Input() data : number;
   @Input() leftLabel: string;

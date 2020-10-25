@@ -1,10 +1,10 @@
 # ng-color-scale
 
-[![npm](https://img.shields.io/npm/v/ng-spectrum-scale.svg)](https://www.npmjs.com/package/ng-spectrum-scale)
-[![npm downloads](https://img.shields.io/npm/dm/ng-spectrum-scale.svg)](https://npmjs.org/ng-spectrum-scale)
-![publish](https://github.com/eddrichjanzzen/ng-spectrum-scale/workflows/Publish%20spectrum/badge.svg)
+[![npm](https://img.shields.io/npm/v/ng-color-scale.svg)](https://www.npmjs.com/package/ng-color-scale)
+[![npm downloads](https://img.shields.io/npm/dm/ng-color-scale.svg)](https://npmjs.org/ng-color-scale)
+![publish](https://github.com/eddrichjanzzen/ng-color-scale/workflows/Publish%20color/badge.svg)
 
-A spectrum scale component implemented using D3.js and Angular. 
+A color scale component implemented using D3.js and Angular. 
 
 
 ## Getting started
@@ -19,17 +19,17 @@ npm install d3
 ### Installation
 
 ```
-npm install ng-spectrum-scale
+npm install ng-color-scale
 ```
 
 ### Setup
-#### Import NgSpectrumScaleModule on your AppModule (EG: app.module.ts):
+#### Import NgColorScaleModule on your AppModule (EG: app.module.ts):
 
 ```js
 ...
 
-// NgSpectrumScaleModule
-import { NgSpectrumScaleModule } from 'ng-spectrum-scale';
+// NgColorScaleModule
+import { NgColorScaleModule } from 'ng-color-scale';
 
 @NgModule({
   declarations: [
@@ -39,9 +39,9 @@ import { NgSpectrumScaleModule } from 'ng-spectrum-scale';
     BrowserModule,
     AppRoutingModule,
 
-    // NgSpectrumScaleModule
+    // NgColorScaleModule
 
-    NgSpectrumScaleModule
+    NgColorScaleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -51,7 +51,7 @@ export class AppModule { }
 #### In your `app.component.html` add the following:
 
 ```html
-<app-spectrum-scale
+<app-color-scale
   [data]="-0.799"
   [leftLabel]="'Feminine'"
   [rightLabel]="'Masculine'"
@@ -61,7 +61,7 @@ export class AppModule { }
   [colorList]="['#FF6347', '#D53E4F','#090979','#0000FF']"
   [displayMeta]="'Your article is '+ '<b>Feminine</b>'"
 >
-</app-spectrum-scale>
+</app-color-scale>
 ```
 
 #### And in your `app.component.ts`:
@@ -98,7 +98,7 @@ __Optional Settings__
 * [leftLabel]{string}: The leftLabel value in the scale (blank by default)
 * [middleLabel]{html string}:  The displayMeta value in the scale. (blank by default)
 * [hideAxis]{boolean}: Option to hide the axis displayed. (set to false by default)
-* [colorList]{Array<string>}: Accepts a list of hex values to form the color spectrum. (sets a color spectrum for you by default). You may override this to change the spectrum. 
+* [colorList]{Array<string>}: Accepts a list of hex values to form the color color. (sets a color color for you by default). You may override this to change the color. 
 
 eg. colorList = ['#FF6347', '#D53E4F','#090979','#0000FF']
 

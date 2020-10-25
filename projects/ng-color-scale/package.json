@@ -1,6 +1,6 @@
 {
-  "name": "ng-spectrum-scale",
-  "version": "0.1.9",
+  "name": "ng-color-scale",
+  "version": "0.0.2",
   "peerDependencies": {
     "@angular/common": "^9.1.12",
     "@angular/core": "^9.1.12",
@@ -11,6 +11,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eddrichjanzzen/ng-spectrum-scale.git"
+    "url": "https://github.com/eddrichjanzzen/ng-color-scale.git"
   }
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgSpectrumScaleComponent } from './ng-spectrum-scale.component';
+import { NgColorScaleComponent } from './ng-color-scale.component';
 
-describe('NgSpectrumScaleComponent', () => {
-  let component: NgSpectrumScaleComponent;
-  let fixture: ComponentFixture<NgSpectrumScaleComponent>;
+describe('NgColorScaleComponent', () => {
+  let component: NgColorScaleComponent;
+  let fixture: ComponentFixture<NgColorScaleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgSpectrumScaleComponent ]
+      declarations: [ NgColorScaleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgSpectrumScaleComponent);
+    fixture = TestBed.createComponent(NgColorScaleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
