@@ -1,4 +1,4 @@
-# ng-spectrum-scale
+# ng-color-scale
 
 [![npm](https://img.shields.io/npm/v/ng-spectrum-scale.svg)](https://www.npmjs.com/package/ng-spectrum-scale)
 [![npm downloads](https://img.shields.io/npm/dm/ng-spectrum-scale.svg)](https://npmjs.org/ng-spectrum-scale)
