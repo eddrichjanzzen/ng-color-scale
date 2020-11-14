@@ -2,10 +2,10 @@ import { Component, OnChanges, Input, OnInit, ChangeDetectionStrategy, SimpleCha
 import * as d3 from 'd3';
 
 @Component({
-  selector: 'app-color-scale',
-  templateUrl: './color-scale.component.html',
+  selector: 'ng-color-scale',
+  templateUrl: './ng-color-scale.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['./color-scale.component.scss']
+  styleUrls: ['./ng-color-scale.component.scss']
 })
 export class NgColorScaleComponent implements OnChanges {
 

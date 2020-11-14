@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgColorScaleModule } from 'ng-color-scale';
+import { NgColorScaleModule } from './../../../ng-color-scale/src/lib/ng-color-scale.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
