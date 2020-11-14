@@ -51,7 +51,7 @@ export class AppModule { }
 #### In your `app.component.html` add the following:
 
 ```html
-<app-color-scale
+<ng-color-scale
   [data]="-0.799"
   [leftLabel]="'Feminine'"
   [rightLabel]="'Masculine'"
@@ -61,7 +61,7 @@ export class AppModule { }
   [colorList]="['#FF6347', '#D53E4F','#090979','#0000FF']"
   [displayMeta]="'Your article is '+ '<b>Feminine</b>'"
 >
-</app-color-scale>
+</ng-color-scale>
 ```
 
 #### And in your `app.component.ts`:
