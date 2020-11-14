@@ -3,5 +3,9 @@
   "dest": "../../dist/ng-color-scale",
   "lib": {
     "entryFile": "src/projects.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "."
+  ]
+  
 }
